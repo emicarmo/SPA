@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body > header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    background-color: dodgerblue;
+    padding: 1rem;
+    color: black;
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+body > header .material-icons{
+    border: none;
+    background: transparent;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+body > header nav{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background-color: dodgerblue;
+    top: 0;
+    left: -60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+body>header nav a{
+    text-decoration: none;
+    color: black;
+    margin: 0 1rem;
+    font-size: 25px;
+}
+
+body>header nav a:hover{
+    color: firebrick;
+    font-weight: bold;
+}
+
+body > header .material-icons #img-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+body > footer{
+    background-color: dodgerblue;
+    text-align: center;
+    padding: 22px;
+    color:black;
+    width: 100%;
+    position: static;
+    bottom: 0;
+    font-weight: bold;
+    box-shadow: 2px 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+main{
+    flex-grow: 1;
+    height: 100%;
+    margin-top: 60px;
+    padding: 1rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    text-decoration: underline;
+}
+
+#portfolio{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#portfolio > article {
+    width: 50%;
+    max-width: 300px;
+    height: 200px;
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+#portfolio > article > div{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.55);
+    transition: all 0.3s ease;
+}
+
+#portfolio > article > div img{
+    height: 120%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#portfolio > article > div #img-galeria{
+    height: 155%;
+}
+
+#portfolio > article > div footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    background-color: dodgerblue;
+    color: black;
+    width: 100%;
+    left: 0;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+#portfolio > article > div:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 3px 18px 3px rgba(0, 0, 0, 0.35);
+}
+
+#portfolio > article > div:hover footer{
+    bottom: 0;
+}
+
+table, tr, td,th {
+    border-collapse: collapse;
+    border: 2px solid tomato;
+}
+
+.btn{
+    background-color: teal;
+    width: 10%;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.logo:hover{
+    border: 2px solid red;
+    background-color: red;
+    width: 200px;
+}
+
+#titulo-puzzle{
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    padding: 20px;
+}
+
+#section-puzzle{
+    width: 95%;
+    height: 650px;
+    margin: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 3px dashed black;
+    box-shadow: 2px 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    background-color: crimson;
+}
+
+#piezas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: auto;
+    justify-content: center;
+}
+
+#puzzle{
+    border: 1px solid black;
+    width: 320px;
+    height: 495px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.pieza{
+    width: 106px;
+    height: 165px;
+    background-size: cover;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.placeholder{
+    background-color: #F2F2F2;
+    outline: 1px solid #333;
+    width: 106px;
+    height: 165px;
+    transition: 1s;
+}
+
+.placeholder.hover{
+    background-color: orange;
+}
+
+.placeholder .pieza{
+    margin: 0;
+}
+
+#mensaje{
+    color: black;
+    text-align: center;
+    display: none;
+    position: relative;
+    top: 20px;
+    font-size: 40px;
+}
+
+.ganaste #mensaje{
+    display: block;
+}
+
+.ganaste .placeholder{
+    outline: none;
+}
+
+.ganaste #piezas{
+    display: none;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caja-semaforo{
+    background-color: black;
+    width: 70px;
+    border: 1px solid black;
+    margin: 10px auto;
+    border-radius: 30px;
+}
+
+.luz-semaforo{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5px auto;
+    background-color: gray;
+}
+
+.centrar{
+    text-align: center;
+}
+
+#productos{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#productos .producto{
+    position: relative;
+    box-sizing: border-box;
+    width: 30%;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 10px 90px 10px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+#productos .producto:hover {
+    box-shadow: 0 0 20px black;
+}
+
+#productos .producto.vendido::before{
+    content: 'VENDIDO';
+    position: absolute;
+    width: 150px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    top: 40px;
+    left: -26px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.producto .imagen {
+    box-sizing: border-box;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: #DDD;
+    margin-bottom: 20px;
+}
+
+.nombre{
+    color: black;
+    text-decoration: none;
+}
+
+.producto .nombre {
+    margin-bottom: 20px;
+}
+
+.producto .descripcion {
+    text-align: justify;
+}
+
+.producto .comprar{
+    width: calc(100% - 40px);
+    border: none;
+    background-color: orange;
+    border-radius: 20px;
+    line-height: 50px;
+    outline: none;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.producto .comprar:hover {
+    background-color: black;
+    color: orange;
+}
+
+.producto .comprar:disabled {
+    background-color: rgba(255, 165, 0, 0.5);
+    color: #AAA;
+}
+
+.producto .comprar:disabled:hover {
+    background-color: rgba(255, 165, 0, 0.5);
+    color: #AAA;
+}
+
+.lista-perfil{
+    list-style: none;
+    font-size: 40px;
+    color: chartreuse;
+}
+
+#contenedor-perfil{
+    width: 100%;
+    height: 185px;
+    background-image: url('../images/background.jpg');
+    background-position: 100px;
+}
+
+.perfil-span{
+    color: crimson;
+    font-weight: 900;
+}
+
+#titulo-certificado{
+    font-size: 30px;
+}
+
+#contenedor-certificados{
+    background-color: black;
+    width: 80%;
+    height: 630px;
+    background-image: url('../images/background2.jpg');
+    background-repeat: round;
+}
+
+#contenedor-link{
+    display: block;
+    justify-content: center;
+    padding: 70px;
+}
+
+.img-link:hover{
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.55);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.img-link{
+    margin: 8px;
+}
+
+#contenedor-contacto{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.img-contacto{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 30%;
+    margin: 80px;
+}
+
+.img-contacto:hover{
+    transform: scale(1.05);
+    transition: all 0.3 ease;
+}
+
+@media screen and (min-width:700px) {
+    body>header{
+        justify-content: space-between;
+    }
+    body>header .material-icons{
+        display: none!important;
+    }
+    body>header nav {
+        display: block;
+        position: static;
+        background-color: dodgerblue;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+    }
+}
